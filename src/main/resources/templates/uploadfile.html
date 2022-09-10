@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head th:insert="fragments.html :: headerfiles"></head>
+<body>
+<header th:insert="fragments.html :: nav"></header>
+<!-- Page content goes here -->
+<div class = "container">
+		<div class = "row">
+			
+			<div class = "col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class= "text-center">Upload New File</h1>
+				<div class = "card-body">
+					<!-- success message -->
+				<div th:if="${param.success}">
+					<div class="alert alert-info">You have successfully uploaded your file.</div>
+				</div>
+					<form th:action ="@{/image}" method = "post" enctype="multipart/form-data">
+						<div class ="form-group">
+						
+							<input type="file" name="image" value="image" class="form-control-file">
+							
+						</div>
+						
+						
+						<div class ="box-footer">
+							<button type="submit" class = "btn btn-primary">
+							Upload File
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

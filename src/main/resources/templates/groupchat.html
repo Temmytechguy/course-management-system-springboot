@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles"></head>
+<body>
+<header th:insert="fragments.html :: nav"></header>
+
+<br>
+<br>
+
+<div class="container">
+    <div class="jumbotron">
+        <h2 class="display-4">Chat with other students! Have Fun
+       </h2>
+        
+        <p class="lead">Chat Room System</p>
+        <hr class="my-4">
+        <p>Web App created By Temidayo Folorunsho under the supervision of L'ecole Doranco 2022</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" th:href = "@{/chat.html}" role="button">Join Now !</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
